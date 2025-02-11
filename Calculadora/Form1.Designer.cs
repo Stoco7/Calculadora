@@ -53,6 +53,25 @@
             this.btnModulo = new System.Windows.Forms.Button();
             this.btnExponenciacao = new System.Windows.Forms.Button();
             this.btnRaizQuadrada = new System.Windows.Forms.Button();
+            this.textBoxValor3 = new System.Windows.Forms.TextBox();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.textBoxValor4 = new System.Windows.Forms.TextBox();
+            this.labelSoma = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxResultado2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnCalcular2 = new System.Windows.Forms.Button();
+            this.btnCalcular3 = new System.Windows.Forms.Button();
+            this.textBoxResultado2_1 = new System.Windows.Forms.TextBox();
+            this.textBoxValor4_1 = new System.Windows.Forms.TextBox();
+            this.textBoxValor3_1 = new System.Windows.Forms.TextBox();
+            this.textBoxResultado3 = new System.Windows.Forms.TextBox();
+            this.textBoxResultado3_1 = new System.Windows.Forms.TextBox();
+            this.textBoxResultado4 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -75,6 +94,7 @@
             this.textBoxResultado.Size = new System.Drawing.Size(385, 20);
             this.textBoxResultado.TabIndex = 1;
             this.textBoxResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBoxResultado.TextChanged += new System.EventHandler(this.textBoxResultado_TextChanged);
             // 
             // btn7
             // 
@@ -417,12 +437,193 @@
             this.btnRaizQuadrada.UseVisualStyleBackColor = false;
             this.btnRaizQuadrada.Click += new System.EventHandler(this.btnRaizQuadrada_Click);
             // 
+            // textBoxValor3
+            // 
+            this.textBoxValor3.Location = new System.Drawing.Point(476, 90);
+            this.textBoxValor3.Name = "textBoxValor3";
+            this.textBoxValor3.Size = new System.Drawing.Size(75, 20);
+            this.textBoxValor3.TabIndex = 25;
+            this.textBoxValor3.TextChanged += new System.EventHandler(this.textBoxValor3_TextChanged);
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.Location = new System.Drawing.Point(668, 117);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular.TabIndex = 26;
+            this.btnCalcular.Text = "Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // textBoxValor4
+            // 
+            this.textBoxValor4.Location = new System.Drawing.Point(572, 90);
+            this.textBoxValor4.Name = "textBoxValor4";
+            this.textBoxValor4.Size = new System.Drawing.Size(75, 20);
+            this.textBoxValor4.TabIndex = 27;
+            this.textBoxValor4.TextChanged += new System.EventHandler(this.textBoxValor4_TextChanged);
+            // 
+            // labelSoma
+            // 
+            this.labelSoma.AutoSize = true;
+            this.labelSoma.Location = new System.Drawing.Point(554, 94);
+            this.labelSoma.Name = "labelSoma";
+            this.labelSoma.Size = new System.Drawing.Size(14, 13);
+            this.labelSoma.TabIndex = 28;
+            this.labelSoma.Text = "+";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(651, 94);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(14, 13);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "=";
+            // 
+            // textBoxResultado2
+            // 
+            this.textBoxResultado2.Location = new System.Drawing.Point(668, 91);
+            this.textBoxResultado2.Name = "textBoxResultado2";
+            this.textBoxResultado2.Size = new System.Drawing.Size(75, 20);
+            this.textBoxResultado2.TabIndex = 30;
+            this.textBoxResultado2.TextChanged += new System.EventHandler(this.textBoxResultado2_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(473, 51);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Calculadora 2";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // btnCalcular2
+            // 
+            this.btnCalcular2.Location = new System.Drawing.Point(668, 179);
+            this.btnCalcular2.Name = "btnCalcular2";
+            this.btnCalcular2.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular2.TabIndex = 32;
+            this.btnCalcular2.Text = "Calcular 2";
+            this.btnCalcular2.UseVisualStyleBackColor = true;
+            this.btnCalcular2.Click += new System.EventHandler(this.btnCalcular2_Click);
+            // 
+            // btnCalcular3
+            // 
+            this.btnCalcular3.Location = new System.Drawing.Point(668, 241);
+            this.btnCalcular3.Name = "btnCalcular3";
+            this.btnCalcular3.Size = new System.Drawing.Size(75, 23);
+            this.btnCalcular3.TabIndex = 33;
+            this.btnCalcular3.Text = "Calcular 3";
+            this.btnCalcular3.UseVisualStyleBackColor = true;
+            this.btnCalcular3.Click += new System.EventHandler(this.btnCalcular3_Click);
+            // 
+            // textBoxResultado2_1
+            // 
+            this.textBoxResultado2_1.Location = new System.Drawing.Point(476, 150);
+            this.textBoxResultado2_1.Name = "textBoxResultado2_1";
+            this.textBoxResultado2_1.Size = new System.Drawing.Size(75, 20);
+            this.textBoxResultado2_1.TabIndex = 34;
+            // 
+            // textBoxValor4_1
+            // 
+            this.textBoxValor4_1.Location = new System.Drawing.Point(572, 150);
+            this.textBoxValor4_1.Name = "textBoxValor4_1";
+            this.textBoxValor4_1.Size = new System.Drawing.Size(75, 20);
+            this.textBoxValor4_1.TabIndex = 35;
+            this.textBoxValor4_1.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // textBoxValor3_1
+            // 
+            this.textBoxValor3_1.Location = new System.Drawing.Point(476, 215);
+            this.textBoxValor3_1.Name = "textBoxValor3_1";
+            this.textBoxValor3_1.Size = new System.Drawing.Size(75, 20);
+            this.textBoxValor3_1.TabIndex = 36;
+            this.textBoxValor3_1.TextChanged += new System.EventHandler(this.textBoxValor3_1_TextChanged);
+            // 
+            // textBoxResultado3
+            // 
+            this.textBoxResultado3.Location = new System.Drawing.Point(668, 150);
+            this.textBoxResultado3.Name = "textBoxResultado3";
+            this.textBoxResultado3.Size = new System.Drawing.Size(75, 20);
+            this.textBoxResultado3.TabIndex = 37;
+            // 
+            // textBoxResultado3_1
+            // 
+            this.textBoxResultado3_1.Location = new System.Drawing.Point(572, 215);
+            this.textBoxResultado3_1.Name = "textBoxResultado3_1";
+            this.textBoxResultado3_1.Size = new System.Drawing.Size(75, 20);
+            this.textBoxResultado3_1.TabIndex = 38;
+            // 
+            // textBoxResultado4
+            // 
+            this.textBoxResultado4.Location = new System.Drawing.Point(668, 215);
+            this.textBoxResultado4.Name = "textBoxResultado4";
+            this.textBoxResultado4.Size = new System.Drawing.Size(75, 20);
+            this.textBoxResultado4.TabIndex = 39;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(651, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 13);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "=";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(651, 218);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 13);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "=";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(555, 221);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(12, 13);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(556, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(11, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(439, 289);
+            this.ClientSize = new System.Drawing.Size(814, 394);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBoxResultado4);
+            this.Controls.Add(this.textBoxResultado3_1);
+            this.Controls.Add(this.textBoxResultado3);
+            this.Controls.Add(this.textBoxValor3_1);
+            this.Controls.Add(this.textBoxValor4_1);
+            this.Controls.Add(this.textBoxResultado2_1);
+            this.Controls.Add(this.btnCalcular3);
+            this.Controls.Add(this.btnCalcular2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBoxResultado2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.labelSoma);
+            this.Controls.Add(this.textBoxValor4);
+            this.Controls.Add(this.btnCalcular);
+            this.Controls.Add(this.textBoxValor3);
             this.Controls.Add(this.btnRaizQuadrada);
             this.Controls.Add(this.btnExponenciacao);
             this.Controls.Add(this.btnModulo);
@@ -485,6 +686,25 @@
         private System.Windows.Forms.Button btnModulo;
         private System.Windows.Forms.Button btnExponenciacao;
         private System.Windows.Forms.Button btnRaizQuadrada;
+        private System.Windows.Forms.TextBox textBoxValor3;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.TextBox textBoxValor4;
+        private System.Windows.Forms.Label labelSoma;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxResultado2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCalcular2;
+        private System.Windows.Forms.Button btnCalcular3;
+        private System.Windows.Forms.TextBox textBoxResultado2_1;
+        private System.Windows.Forms.TextBox textBoxValor4_1;
+        private System.Windows.Forms.TextBox textBoxValor3_1;
+        private System.Windows.Forms.TextBox textBoxResultado3;
+        private System.Windows.Forms.TextBox textBoxResultado3_1;
+        private System.Windows.Forms.TextBox textBoxResultado4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

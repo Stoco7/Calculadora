@@ -14,7 +14,7 @@ namespace Calculadora
 {
     public partial class Form1 : Form
     {
-        decimal valor1 = 0, valor2 = 0;
+        decimal valor1 = 0, valor2 = 0, valor3 = 0, valor4 = 0;
         string operacao = "";
         public Form1()
         {
@@ -169,16 +169,16 @@ namespace Calculadora
 
                 if (textBoxResultado.Text != "")
                 {
-                if (valor1 >= 0)
-                {
+                    if (valor1 >= 0)
+                    {
                     double raiz = Math.Sqrt((double)valor1);
                     textBoxResultado.Text = raiz.ToString(CultureInfo.InvariantCulture);
-                }
-                else
-                {
+                    }
+                    else
+                    {
                     MessageBox.Show("Não é possível calcular a raiz quadrada de um número negativo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBoxResultado.Text = "";
-                }
+                    }
                 }
             }
             else if (operacao == "EXPONENCIACAO")
@@ -266,6 +266,73 @@ namespace Calculadora
             {
                 MessageBox.Show("Informe um valor para calcular a porcentagem");
             }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            textBoxResultado2.Text = Convert.ToString(valor3 + valor4, CultureInfo.InvariantCulture);
+            textBoxResultado2_1.Text = textBoxResultado2.Text;
+            textBoxValor4_1.Text = textBoxValor4.Text;
+        }
+
+        private void textBoxValor3_TextChanged(object sender, EventArgs e)
+        {
+            valor3 = decimal.Parse(textBoxValor3.Text, CultureInfo.InvariantCulture);
+        }
+
+        private void textBoxResultado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcular2_Click(object sender, EventArgs e)
+        {
+            decimal Resultado2 = decimal.Parse(textBoxResultado2_1.Text, CultureInfo.InvariantCulture);
+            decimal Valor4 = decimal.Parse(textBoxValor4_1.Text, CultureInfo.InvariantCulture);
+            decimal Resultado3 = Resultado2 - Valor4;
+            textBoxResultado3.Text = Convert.ToString(Resultado3, CultureInfo.InvariantCulture);
+            textBoxValor3_1.Text = textBoxValor3.Text;
+            textBoxResultado3_1.Text = textBoxResultado3.Text;
+
+        }
+
+        private void textBoxValor3_1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCalcular3_Click(object sender, EventArgs e)
+        {
+
+            decimal Valor1 = decimal.Parse(textBoxValor3.Text, CultureInfo.InvariantCulture);
+            decimal Resultado2 = decimal.Parse(textBoxResultado3.Text, CultureInfo.InvariantCulture);
+            decimal Resultado4 = Valor1 * Resultado2;
+            textBoxResultado4.Text = Convert.ToString(Resultado4, CultureInfo.InvariantCulture);
+        }
+
+        private void textBoxResultado2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxValor4_TextChanged(object sender, EventArgs e)
+        {
+            valor4 = decimal.Parse(textBoxValor4.Text, CultureInfo.InvariantCulture);
         }
 
         private void btn9_Click(object sender, EventArgs e)
